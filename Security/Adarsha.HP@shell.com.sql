@@ -1,0 +1,2 @@
+﻿CREATE USER [Adarsha.HP@shell.com] FOR EXTERNAL PROVIDER;
+

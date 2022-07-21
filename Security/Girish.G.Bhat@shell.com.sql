@@ -1,0 +1,2 @@
+﻿CREATE USER [Girish.G.Bhat@shell.com] FOR EXTERNAL PROVIDER;
+

@@ -1,0 +1,18 @@
+﻿CREATE TABLE [TRANSPOREON_TMS].[CARRIER_SURCHARGE_FACT_STG] (
+    [DELIVERY_NO]                   NUMERIC (25)  NOT NULL,
+    [TRANSPORT_NO]                  VARCHAR (50)  NULL,
+    [SURCHARGE_ID]                  BIGINT        NOT NULL,
+    [SURCHARGE_SYSTEM_DATESTAMP_ID] BIGINT        NULL,
+    [SURCHARGE_SYSTEM_TIMESTAMP_ID] BIGINT        NULL,
+    [SURCHARGE_PRICE]               VARCHAR (50)  NULL,
+    [SURCHARGE_CURRENCY_CODE]       VARCHAR (5)   NULL,
+    [SURCHARGE_DESC]                VARCHAR (MAX) COLLATE Latin1_General_100_CI_AI_SC_UTF8 NULL,
+    [SURCHARGE_STATUS_ID]           BIGINT        NULL,
+    [SURCHARGE_NAME]                VARCHAR (100) NULL,
+    [COMPANY_NAME]                  VARCHAR (MAX) NULL,
+    [REASON_DESC]                   VARCHAR (MAX) COLLATE Latin1_General_100_CI_AI_SC_UTF8 NULL,
+    [SURCHARGE_LEVEL_DESC]          VARCHAR (50)  NULL,
+    [STATUS]                        VARCHAR (5)   NULL,
+    [TIMESTAMP]                     DATETIME      NOT NULL
+);
+

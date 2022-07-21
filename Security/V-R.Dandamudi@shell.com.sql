@@ -1,0 +1,2 @@
+﻿CREATE USER [V-R.Dandamudi@shell.com] FOR EXTERNAL PROVIDER;
+

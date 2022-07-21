@@ -1,0 +1,7 @@
+﻿CREATE TABLE [GSAP].[FX_RATES_TBL] (
+    [CURRENCY_CODE]              VARCHAR (10) NULL,
+    [PLANNED_FX_RATE]            FLOAT (53)   NULL,
+    [PLANNED_FX_RATE_MONTH_YEAR] VARCHAR (5)  NULL,
+    [TYPE_NAME]                  VARCHAR (10) NULL
+);
+

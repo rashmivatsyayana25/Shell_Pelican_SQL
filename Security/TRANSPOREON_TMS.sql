@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [TRANSPOREON_TMS]
+    AUTHORIZATION [Narinder.Kaur@shell.com];
+

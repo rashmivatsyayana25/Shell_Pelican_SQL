@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Pelican_SQL_DEV</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{f47baad9-ae76-4762-840c-4d8ed397cf1a}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Pelican_SQL_DEV</RootNamespace>
+    <AssemblyName>Pelican_SQL_DEV</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="GSAP\" />
+    <Folder Include="GSAP\Tables\" />
+    <Folder Include="Pelican\" />
+    <Folder Include="Pelican\Tables\" />
+    <Folder Include="COMMON_DIMENSIONS\" />
+    <Folder Include="COMMON_DIMENSIONS\Tables\" />
+    <Folder Include="TRANSPOREON_TMS\" />
+    <Folder Include="TRANSPOREON_TMS\Tables\" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="GSAP\Views\" />
+    <Folder Include="Pelican\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="Pelican\Stored Procedures\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="TRANSPOREON_TMS\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="GSAP\Tables\SUPPLY_VOLUME_PLAN.sql" />
+    <Build Include="Pelican\Tables\Supply_Volume_Actual.sql" />
+    <Build Include="Pelican\Tables\Supply_Volume_Plan.sql" />
+    <Build Include="Pelican\Tables\SupplyVolume_Actual.sql" />
+    <Build Include="Pelican\Tables\SupplyVolume_Plan.sql" />
+    <Build Include="COMMON_DIMENSIONS\Tables\BOOKING_STATUS_DIM.sql" />
+    <Build Include="COMMON_DIMENSIONS\Tables\COUNTRY_DIM.sql" />
+    <Build Include="COMMON_DIMENSIONS\Tables\CUSTOMER_DIM.sql" />
+    <Build Include="TRANSPOREON_TMS\Tables\BOOKING_FACT_TBL.sql" />
+    <Build Include="COMMON_DIMENSIONS\Tables\INCOTERM_DIM.sql" />
+    <Build Include="TRANSPOREON_TMS\Tables\CARRIER_SURCHARGE_FACT_TBL.sql" />
+    <Build Include="COMMON_DIMENSIONS\Tables\LOADING_TYPE_DIM.sql" />
+    <Build Include="TRANSPOREON_TMS\Tables\DELIVERY_DOCUMENT_FACT_TBL.sql" />
+    <Build Include="COMMON_DIMENSIONS\Tables\MATERIAL_DIM.sql" />
+    <Build Include="Pelican\Tables\CONFIG_DATA.sql" />
+    <Build Include="COMMON_DIMENSIONS\Tables\ORDER_TYPE_DIM.sql" />
+    <Build Include="TRANSPOREON_TMS\Tables\TRANSPORT_FACT_TBL.sql" />
+    <Build Include="COMMON_DIMENSIONS\Tables\ROUTE_DIM.sql" />
+    <Build Include="GSAP\Tables\COST_HEAD_TBL.sql" />
+    <Build Include="TRANSPOREON_TMS\Tables\TRANSPORT_VISIBILITY_FACT_TBL.sql" />
+    <Build Include="COMMON_DIMENSIONS\Tables\SALES_OFFICE_DIM.sql" />
+    <Build Include="GSAP\Tables\FX_RATES_TBL.sql" />
+    <Build Include="GSAP\Tables\SUPPLY_VOLUME_PLAN_TBL.sql" />
+    <Build Include="COMMON_DIMENSIONS\Tables\SHIPMENT_STATUS_DIM.sql" />
+    <Build Include="dbo\Tables\TB_WAREHOUSE_COST_DELIVERY.sql" />
+    <Build Include="GSAP\Tables\COMPANY_TBL.sql" />
+    <Build Include="dbo\Tables\TB_WAREHOUSE_COST_CATEGORY.sql" />
+    <Build Include="COMMON_DIMENSIONS\Tables\SURCHARGE_STATUS_DIM.sql" />
+    <Build Include="GSAP\Tables\COST_PLAN_TBL.sql" />
+    <Build Include="Pelican\Tables\Actual Fx curr_convert .sql" />
+    <Build Include="COMMON_DIMENSIONS\Tables\UOM_DIM.sql" />
+    <Build Include="TRANSPOREON_TMS\Tables\BOOKING_FACT_STG.sql" />
+    <Build Include="Pelican\Tables\Actual_Fx_curr_convert .sql" />
+    <Build Include="TRANSPOREON_TMS\Tables\CARRIER_SURCHARGE_FACT_STG.sql" />
+    <Build Include="TRANSPOREON_TMS\Tables\BOOKING_FACT.sql" />
+    <Build Include="TRANSPOREON_TMS\Tables\DELIVERY_DOCUMENT_FACT_STG.sql" />
+    <Build Include="TRANSPOREON_TMS\Tables\DELIVERY_ITEM_FACT_STG.sql" />
+    <Build Include="TRANSPOREON_TMS\Tables\CARRIER_SURCHARGE_FACT.sql" />
+    <Build Include="TRANSPOREON_TMS\Tables\TRANSPORT_FACT_STG.sql" />
+    <Build Include="TRANSPOREON_TMS\Tables\TRANSPORT_VISIBILITY_FACT_STG.sql" />
+    <Build Include="TRANSPOREON_TMS\Tables\DELIVERY_DOCUMENT_FACT.sql" />
+    <Build Include="TRANSPOREON_TMS\Tables\DELIVERY_ITEM_FACT_TBL.sql" />
+    <Build Include="Pelican\Tables\Monthly_FxRate.sql" />
+    <Build Include="TRANSPOREON_TMS\Tables\TRANSPORT_FACT.sql" />
+    <Build Include="TRANSPOREON_TMS\Tables\TRANSPORT_VISIBILITY_FACT.sql" />
+    <Build Include="COMMON_DIMENSIONS\Tables\DATE_DIM.sql" />
+    <Build Include="TRANSPOREON_TMS\Tables\DELIVERY_ITEM_FACT.sql" />
+    <Build Include="GSAP\Tables\FX_RATES.sql" />
+    <Build Include="GSAP\Tables\COST_HEAD.sql" />
+    <Build Include="GSAP\Tables\SUPPLY_VOLUME_ACTUAL.sql" />
+    <Build Include="Pelican\Tables\costHead.sql" />
+    <Build Include="COMMON_DIMENSIONS\Tables\TIME_DIM.sql" />
+    <Build Include="Pelican\Tables\cost_plan.sql" />
+    <Build Include="GSAP\Tables\Company.sql" />
+    <Build Include="GSAP\Tables\ServiceType.sql" />
+    <Build Include="Pelican\Tables\GSAP_PROD.sql" />
+    <Build Include="GSAP\Tables\COST_PLAN.sql" />
+    <Build Include="GSAP\Views\Cost_plan_FxRate.sql" />
+    <Build Include="Pelican\Views\vw_converted_amount_sum.sql" />
+    <Build Include="GSAP\Views\FB3LN_FxRate.sql" />
+    <Build Include="GSAP\Views\Country.sql" />
+    <Build Include="GSAP\Views\Spend_Variance.sql" />
+    <Build Include="GSAP\Views\Total_Cost_Insight.sql" />
+    <Build Include="GSAP\Views\Volume_Impact.sql" />
+    <Build Include="GSAP\Views\EAndB.sql" />
+    <Build Include="Pelican\Views\SV_Plan_Actual.sql" />
+    <Build Include="Pelican\Views\monthlyRate.sql" />
+    <Build Include="Pelican\Views\Actual_monthly_fxRate.sql" />
+    <Build Include="Pelican\Views\Waterfall_Home.sql" />
+    <Build Include="Security\Karthikeyan.Kumar3%40shell.com.sql" />
+    <Build Include="Security\Narinder.Kaur%40shell.com.sql" />
+    <Build Include="Security\shell-02-eun-adf-omvmtqvuofhotsovcyq.sql" />
+    <Build Include="Security\Karthik.Patel%40shell.com.sql" />
+    <Build Include="Security\Adarsha.HP%40shell.com.sql" />
+    <Build Include="Security\Manjunath.Shivaram%40shell.com.sql" />
+    <Build Include="Security\Girish.G.Bhat%40shell.com.sql" />
+    <Build Include="Security\Suchita.Mehta%40shell.com.sql" />
+    <Build Include="Security\mahesh.kamisetty%40shell.com.sql" />
+    <Build Include="Security\S.Byri%40shell.com.sql" />
+    <Build Include="Security\Aditya.a.gupta3%40shell.com.sql" />
+    <Build Include="Security\Richard.inman%40shell.com.sql" />
+    <Build Include="Security\c.darapaneni%40shell.com.sql" />
+    <Build Include="Security\V-R.Dandamudi%40shell.com.sql" />
+    <Build Include="Security\Mohana.Krishna%40shell.com.sql" />
+    <Build Include="Security\Urvashi.Parihar%40Shell.com.sql" />
+    <Build Include="Security\shell-02-eun-adf-yxahlypdhtfjqmvzrqt.sql" />
+    <Build Include="Security\AZ-DNA-GRP-SG-N-DS-TMS-TEST-DBOWNER.sql" />
+    <Build Include="Security\AZ-DNA-GRP-SG-N-DS-TMS-TEST-DDLADMIN.sql" />
+    <Build Include="Security\AZ-DNA-GRP-SG-N-DS-TMS-TEST-DATAWRTER.sql" />
+    <Build Include="Security\AZ-DNA-GRP-SG-N-DS-TMS-TEST-DATAREADER.sql" />
+    <Build Include="Security\AZ-DNA-GRP-SG-N-DS-TMS-TEST-ADFSPN.sql" />
+    <Build Include="Security\AZ-DNA-SPN-N-DS-71f00a20e2fe4d2bb73c.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="Pelican\Stored Procedures\FB3LN_FxRate_SP.sql" />
+    <Build Include="dbo\Stored Procedures\USP_MERGE_INCREMENTAL_DATA_PRC.sql" />
+    <Build Include="TRANSPOREON_TMS\Stored Procedures\USP_MERGE_INCREMENTAL_DATA_PRC.sql" />
+    <Build Include="Security\COMMON_DIMENSIONS.sql" />
+    <Build Include="Security\TRANSPOREON_TMS.sql" />
+    <Build Include="Security\GSAP.sql" />
+    <Build Include="Security\Pelican.sql" />
+  </ItemGroup>
+</Project>

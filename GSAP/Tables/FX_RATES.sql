@@ -1,0 +1,7 @@
+﻿CREATE TABLE [GSAP].[FX_RATES] (
+    [CURRENCY] VARCHAR (10)   NULL,
+    [RATE]     DECIMAL (8, 3) NULL,
+    [MONTH]    VARCHAR (15)   NULL,
+    [TYPE]     VARCHAR (10)   NULL
+);
+

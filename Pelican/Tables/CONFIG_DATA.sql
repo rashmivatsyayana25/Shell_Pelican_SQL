@@ -1,0 +1,16 @@
+﻿CREATE TABLE [Pelican].[CONFIG_DATA] (
+    [CONFIG_ID]           INT           IDENTITY (1, 1) NOT NULL,
+    [LAYER]               VARCHAR (10)  NULL,
+    [ENTITY_TYPE]         VARCHAR (100) NULL,
+    [ENTITY_NAME]         VARCHAR (250) NULL,
+    [SOURCE_FOLDER_PATH]  VARCHAR (MAX) NULL,
+    [TARGET_FOLDER_PATH]  VARCHAR (MAX) NULL,
+    [SOURCE_NAME]         VARCHAR (50)  NULL,
+    [PROCESS]             VARCHAR (1)   NULL,
+    [COMMENT]             VARCHAR (MAX) NULL,
+    [CONFIG_CREATED_DATE] DATE          NULL,
+    [CONFIG_UPDATED_DATE] DATE          NULL,
+    [LAST_LOAD_DATE]      DATETIME      NULL,
+    [PREVIOUS_LOAD_DATE]  DATE          NULL
+);
+

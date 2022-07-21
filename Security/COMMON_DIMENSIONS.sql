@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [COMMON_DIMENSIONS]
+    AUTHORIZATION [Narinder.Kaur@shell.com];
+
